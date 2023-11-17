@@ -1,7 +1,7 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-package BarberoDurmiente;
+package BarberoDurmiente_Synchronized;
 
 /**
  *
@@ -9,11 +9,12 @@ package BarberoDurmiente;
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Barbero miBarbero = new Barbero();
         for (int i = 0; i < 10; i++) {
             Cliente miCliente = new Cliente(miBarbero, i);
-            miCliente.start();
+            miCliente.start();           
         }
+        
     }
 }
